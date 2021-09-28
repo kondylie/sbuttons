@@ -1,0 +1,54 @@
+.borderRule(@color) {
+    border: 3px double @color;
+  }
+  
+  .bouble-btn {
+    background-color: transparent;
+  
+    &.blue-btn {
+      .borderRule(@blue);
+    }
+    &.pink-btn {
+      .borderRule(@pink);
+    }
+  
+    &.red-btn {
+      .borderRule(@red);
+    }
+  
+    &.green-btn {
+      .borderRule(@green);
+    }
+  
+    &.yellow-btn {
+      .borderRule(@yellow);
+    }
+  
+    &.orange-btn {
+      .borderRule(@orange);
+    }
+  
+    &.purple-btn {
+      .borderRule(@purple);
+    }
+  
+    &.black-btn {
+      .borderRule(@black);
+  
+      [data-theme="dark"] &,
+      &.dark-mode {
+        .borderRule(@white);
+      }
+    }
+  
+    &.white-btn {
+      border: 3px double @whiteBorder;
+      color: @darkText !important;
+  
+      [data-theme="dark"] &,
+      &.dark-mode {
+        .borderRule(@white);
+      }
+    }
+  }
+  
